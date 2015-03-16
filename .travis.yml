@@ -15,7 +15,7 @@ script:
   - 'if [[ $TRAVIS_PULL_REQUEST == "false" ]]; then git remote add origin git@github.com:Freecellera/freecellera.github.io.git; fi'  
   - 'if [[ $TRAVIS_PULL_REQUEST == "false" ]]; then git fetch origin; fi'
   - make publish
-  - echo 'freecellera.org' > output/CNAME
+  #- echo 'freecellera.org' > output/CNAME
   - 'if [[ $TRAVIS_PULL_REQUEST == "false" ]]; then ghp-import -m "Automatic Generate Pelican site" -b master output; fi'
   - 'if [[ $TRAVIS_PULL_REQUEST == "false" ]]; then git push -f origin master; fi'
 notifications:
